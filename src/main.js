@@ -65,71 +65,64 @@ gsap.to('#hero-container', {
   }
 })
 
-// Hero Container Hover Effect (3D Tilt)
+// Hero Container Hover Effect
 const heroContainer = document.getElementById('hero-container')
 
 if (heroContainer) {
-  // Set initial perspective
-  gsap.set(heroContainer, { transformPerspective: 1000, transformStyle: "preserve-3d" })
+  // Add perspective for 3D effect
+  gsap.set(heroContainer, { transformPerspective: 1000 })
 
   heroContainer.addEventListener('mousemove', (e) => {
     const rect = heroContainer.getBoundingClientRect()
-    const mouseX = e.clientX - rect.left
-    const mouseY = e.clientY - rect.top
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
     const centerX = rect.width / 2
     const centerY = rect.height / 2
 
-    // Map mouse position to rotation (Subtle tilt range: -2 to 2 degrees)
-    // When mouse is Left, rotateY is negative (tilts left side back? No, rotateY(-deg) moves left side *forward* usually, let's test logic)
-    // Actually:
-    // Mouse Left -> We want Left side to push BACK? "corner moves back"
-    // If Left side pushes back, that looks like rotateY being negative?
-    // Let's stick to standard 3D tilt: Mouse Left -> Tilt Left (Left goes down/away).
-    // RotateY: Positive moves Right side away (Left side close). Negative moves Left side away (Right side close).
-    // So if Mouse is on Left (x < center), we want Left side away -> RotateY should be Negative.
+    // Tilt Calculation: Pushing the hovered part AWAY (into screen)
+    // Mouse Left (x < center) -> rotateY should be negative (Left side goes away)
+    // Mouse Right (x > center) -> rotateY should be positive (Right side goes away)
+    // Mouse Top (y < center) -> rotateX should be positive (Top goes away)
+    // Mouse Bottom (y > center) -> rotateX should be negative (Bottom goes away)
 
-    // Correction:
-    // Standard tilt: Mouse Top-Left -> Object tilts Top-Left back.
-    // rotationX: + tilts top closer, - tilts top away. So Mouse Top -> rotationX positive? No, Mouse at Top -> Top should go AWAY -> RotationX Positive (Top moves into screen). 
-    // Wait, CSS coords:
-    // rotateX(pos) -> top moves AWAY into screen.
-    // rotateY(pos) -> right moves AWAY into screen.
+    const rotateY = ((x - centerX) / centerX) * 5 // Max 5 deg rotation
+    const rotateX = -((y - centerY) / centerY) * 5 // Max 5 deg rotation
 
-    // So:
-    // Mouse X (0 to width) -> mapped to rotateY (-5 to 5). 
-    // 0 (Left) -> -5 (Left moves away? No wait).
-    // Let's use standard logic:
-    // percentX = (x - centerX) / centerX
-    // percentY = (y - centerY) / centerY
-
-    // rotateY = percentX * strength (e.g. 5)
-    // If mouse is Right (positive percent), rotateY is positive (Right moves away).
-    // rotateX = -1 * percentY * strength
-    // If mouse is Bottom (positive percent), rotateX is negative (Bottom moves away/up? No, usually Bottom Back is rotateX negative).
-
-    // Let's try:
-    // Mouse Top (y small): We want Top Away -> rotateX (>0)
-    // Mouse Bottom (y large): We want Bottom Away -> rotateX (<0)
-
-    const rotateY = ((mouseX - centerX) / centerX) * 3 // Max 3 deg
-    const rotateX = -((mouseY - centerY) / centerY) * 3 // Max 3 deg
+    // Spotlight Effect Calculation
+    const spotlightX = (x / rect.width) * 100
+    const spotlightY = (y / rect.height) * 100
 
     gsap.to(heroContainer, {
-      rotationY: rotateY,
       rotationX: rotateX,
+      rotationY: rotateY,
       duration: 0.5,
       ease: 'power2.out',
       overwrite: 'auto'
     })
+
+    // Update gradient spotlight via CSS
+    heroContainer.style.background = `
+      radial-gradient(circle at ${spotlightX}% ${spotlightY}%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%),
+      linear-gradient(to bottom, #52a6de 0%, rgba(59,130,246,0) 250px),
+      linear-gradient(to right, #e0f2fe 0%, #52a6de 50%, #e0f2fe 100%) no-repeat
+    `
+    heroContainer.style.backgroundSize = 'cover, cover, cover'
   })
 
   heroContainer.addEventListener('mouseleave', () => {
     gsap.to(heroContainer, {
-      rotationY: 0,
       rotationX: 0,
-      duration: 0.8,
+      rotationY: 0,
+      duration: 1,
       ease: 'elastic.out(1, 0.5)'
     })
+
+    // Reset background to original state smoothly (approximate or just hard reset for now)
+    heroContainer.style.background = `
+      linear-gradient(to bottom, #52a6de 0%, rgba(59,130,246,0) 250px),
+      linear-gradient(to right, #e0f2fe 0%, #52a6de 50%, #e0f2fe 100%) no-repeat
+    `
+    heroContainer.style.backgroundSize = 'cover'
   })
 }
 
@@ -143,44 +136,6 @@ gsap.utils.toArray('button, a[href^="#"]').forEach(btn => {
     gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' })
   })
 })
-
-// Hero CTA Button 3D Tilt
-const heroBtn = document.getElementById('hero-cta')
-
-if (heroBtn) {
-  gsap.set(heroBtn, { transformPerspective: 800, transformStyle: "preserve-3d" })
-
-  heroBtn.addEventListener('mousemove', (e) => {
-    const rect = heroBtn.getBoundingClientRect()
-    const mouseX = e.clientX - rect.left
-    const mouseY = e.clientY - rect.top
-    const centerX = rect.width / 2
-    const centerY = rect.height / 2
-
-    // Stronger tilt for button (max 10deg)
-    const rotateY = ((mouseX - centerX) / centerX) * 12
-    const rotateX = -((mouseY - centerY) / centerY) * 12
-
-    gsap.to(heroBtn, {
-      rotationY: rotateY,
-      rotationX: rotateX,
-      scale: 1.1, // Slight scale up
-      duration: 0.1,
-      ease: 'power1.out',
-      overwrite: 'auto'
-    })
-  })
-
-  heroBtn.addEventListener('mouseleave', () => {
-    gsap.to(heroBtn, {
-      rotationY: 0,
-      rotationX: 0,
-      scale: 1,
-      duration: 0.5,
-      ease: 'elastic.out(1, 0.3)'
-    })
-  })
-}
 
 // Section Text Reveal Animations (Headings & Paragraphs)
 const sections = document.querySelectorAll('section')
