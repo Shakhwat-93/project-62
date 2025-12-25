@@ -66,8 +66,8 @@ if (heroContainer) {
     // Mouse Top (y < center) -> rotateX should be positive (Top goes away)
     // Mouse Bottom (y > center) -> rotateX should be negative (Bottom goes away)
 
-    const rotateY = ((x - centerX) / centerX) * 5 // Max 5 deg rotation
-    const rotateX = -((y - centerY) / centerY) * 5 // Max 5 deg rotation
+    const rotateY = ((x - centerX) / centerX) * 2 // Max 2 deg rotation (reduced for subtlety)
+    const rotateX = -((y - centerY) / centerY) * 2 // Max 2 deg rotation
 
     // Spotlight Effect Calculation
     const spotlightX = (x / rect.width) * 100
