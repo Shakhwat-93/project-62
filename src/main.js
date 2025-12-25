@@ -52,9 +52,6 @@ window.addEventListener('scroll', () => {
     navButton.classList.remove('bg-white', 'text-blue-600')
     navButton.classList.add('bg-blue-600', 'text-white')
 
-    // Icon handling is complex due to SVG replacement, simpler to just effect the parent button or utility classes
-    // But for now, let's keep it simple. The text color change above covers the logo.
-
   } else {
     navbar.classList.remove('bg-white/90', 'shadow-sm', 'backdrop-blur-md', 'dark:bg-slate-900/90', 'dark:border-slate-800')
     navbar.classList.add('border-transparent')
@@ -70,10 +67,32 @@ window.addEventListener('scroll', () => {
 })
 
 // GSAP Animations
-// Hero Elements
 const heroTimeline = gsap.timeline()
 
-// We already have CSS animations, but let's add some scroll trigger animations for other sections
+// Horizontal Scroll for Value Prop
+const track = document.getElementById('value-prop-track')
+if (track) {
+  // Calculate total width to scroll: Track Width - Viewport Width
+  const getScrollAmount = () => {
+    let trackWidth = track.scrollWidth
+    return -(trackWidth - window.innerWidth)
+  }
+
+  const tween = gsap.to(track, {
+    x: getScrollAmount,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#value-prop-section",
+      start: "top top",
+      end: "bottom bottom", // Scroll for the entire duration of the section height
+      scrub: 2, // Smoother scrubbing with inertia
+      invalidateOnRefresh: true,
+      anticipatePin: 1
+    }
+  })
+}
+
+// Other Section Animations
 gsap.utils.toArray('section h2').forEach(heading => {
   gsap.from(heading, {
     scrollTrigger: {
@@ -84,20 +103,6 @@ gsap.utils.toArray('section h2').forEach(heading => {
     opacity: 0,
     duration: 1,
     ease: "power3.out"
-  })
-})
-
-gsap.utils.toArray('.grid > div').forEach((card, i) => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%",
-    },
-    y: 50,
-    opacity: 0,
-    duration: 0.8,
-    delay: i * 0.1, // Stagger effect based on index not perfectly available here easily without complex logic, but we can rely on scroll position
-    ease: "back.out(1.7)"
   })
 })
 
