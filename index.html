@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,8 +11,8 @@
 <body class="bg-brand-bg dark:bg-slate-950 text-brand-text antialiased transition-colors duration-300 min-h-screen">
 
   <!-- Floating Hero Container -->
-  <div
-    class="relative mx-4 mt-4 md:mx-6 md:mt-6 rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[90vh] backdrop-blur-3xl border border-white/20 dark"
+  <div id="hero-container"
+    class="relative mx-4 mt-4 md:mx-6 md:mt-6 rounded-[2.5rem] overflow-hidden min-h-[90vh] backdrop-blur-3xl dark"
     style="background: linear-gradient(to bottom, #52a6de 0%, rgba(59,130,246,0) 250px), linear-gradient(to right, #e0f2fe 0%, #52a6de 50%, #e0f2fe 100%) no-repeat; background-size: cover;">
     <!-- Navbar -->
     <nav class="absolute top-0 w-full z-50 transition-all duration-300 border-b border-transparent" id="navbar">
@@ -26,10 +26,6 @@
             <i data-lucide="moon" class="w-5 h-5 text-white dark:text-gray-300 block dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 text-white dark:text-gray-300 hidden dark:block"></i>
           </button>
-          <a href="#book"
-            class="hidden md:inline-flex px-6 py-2.5 bg-white text-blue-600 rounded-full font-medium hover:opacity-90 transition-opacity shadow-lg">
-            Book Strategy Call
-          </a>
         </div>
       </div>
     </nav>
@@ -60,115 +56,32 @@
     </section>
   </div>
 
-  <!-- Value Proposition Horizontal Scroll -->
-  <section id="value-prop-section" class="relative h-[400vh] py-24 bg-white dark:bg-slate-900">
-    <div id="value-prop-sticky" class="sticky top-0 h-screen flex flex-col justify-center overflow-hidden p-6 md:p-12">
 
-      <!-- Header (Centered and relative) -->
-      <div class="max-w-4xl mx-auto text-center mb-16 relative z-20">
-        <h3 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">What we own end-to-end</h3>
-        <p class="text-gray-500 text-lg mt-4 dark:text-gray-400">Scroll to explore our process</p>
-      </div>
 
-      <!-- Horizontal Track -->
-      <div id="value-prop-track" class="flex gap-8 w-max will-change-transform items-center">
-
-        <!-- Card 1: Purple -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-purple-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              1
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">ICP & Buyer Targeting</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Pinpoint
-              accuracy on finding your total addressable market.</p>
-          </div>
-          <i data-lucide="target"
-            class="absolute bottom-6 right-6 w-32 h-32 text-purple-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
+  <!-- Results/Benefits -->
+  <section class="py-36 px-36 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-12 items-start">
+        <!-- Left: Heading -->
+        <div>
+          <span
+            class="text-blue-600 font-semibold tracking-wide uppercase text-sm dark:text-blue-400 mb-6 block">End-to-End
+            Ownership</span>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">What we
+            own<br>end-to-end</h2>
         </div>
 
-        <!-- Card 2: Orange -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-orange-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              2
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">Offer-Aligned Messaging</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Crafting
-              compelling narratives that resonate with pain points.</p>
-          </div>
-          <i data-lucide="message-square"
-            class="absolute bottom-6 right-6 w-32 h-32 text-orange-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
+        <!-- Right: Text -->
+        <div class="space-y-8 mt-4 md:mt-0">
+          <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            We handle ICP definition, targeting, and prospect logic, develop messaging aligned to your offer, and
+            execute outreach across LinkedIn and cold email. We manage replies, follow-ups, and qualification, and
+            continuously optimise based on real responses.
+          </p>
+          <p class="text-lg text-gray-900 dark:text-white font-bold leading-relaxed">
+            You focus on closing. We handle everything before that.
+          </p>
         </div>
-
-        <!-- Card 3: Cyan -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-cyan-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              3
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">Multi-Channel Outreach</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Systematic
-              execution across LinkedIn, Email, and Phone.</p>
-          </div>
-          <i data-lucide="share-2"
-            class="absolute bottom-6 right-6 w-32 h-32 text-cyan-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
-        </div>
-
-        <!-- Card 4: Rose -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-rose-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              4
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">Reply Handling</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Timely and
-              professional responses to nurture interest.</p>
-          </div>
-          <i data-lucide="inbox"
-            class="absolute bottom-6 right-6 w-32 h-32 text-rose-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
-        </div>
-
-        <!-- Card 5: Emerald -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-emerald-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              5
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">Conversion Follow-ups</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Persistent but
-              polite sequences to turn "maybes" into meetings.</p>
-          </div>
-          <i data-lucide="arrow-right-left"
-            class="absolute bottom-6 right-6 w-32 h-32 text-emerald-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
-        </div>
-
-        <!-- Card 6: Indigo -->
-        <div
-          class="w-[85vw] md:w-[340px] h-[400px] bg-indigo-100 dark:bg-slate-800 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-xl shrink-0 group hover:-translate-y-2 transition-transform duration-300">
-          <div class="relative z-10">
-            <div
-              class="w-12 h-12 rounded-full border-2 border-gray-900/10 flex items-center justify-center text-lg font-bold text-gray-900 mb-6 bg-white/20 backdrop-blur-sm">
-              6
-            </div>
-            <h4 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white">Continuous Optimization</h4>
-            <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-[90%]">Data-driven
-              iteration to improve open rates and quality.</p>
-          </div>
-          <i data-lucide="bar-chart-2"
-            class="absolute bottom-6 right-6 w-32 h-32 text-indigo-200/50 dark:text-slate-700/50 -rotate-12 transition-transform group-hover:scale-110"></i>
-        </div>
-
       </div>
     </div>
   </section>
@@ -176,73 +89,110 @@
   <!-- Infographic Section -->
   <!-- Infographic Section -->
   <section class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
 
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-24 text-gray-900 dark:text-white">How it works?</h2>
 
       <div class="relative flex flex-col md:flex-row justify-between items-start gap-8 md:gap-4">
 
         <!-- Connecting Line (Desktop Only) -->
-        <div
-          class="hidden md:block absolute top-[2.5rem] left-16 right-16 h-0.5 border-t-2 border-dotted border-gray-200 dark:border-slate-700 -z-0">
-        </div>
+
 
         <!-- Step 1: ICP -->
-        <div class="flex flex-col items-center text-center flex-1 relative z-10 w-full group">
+        <div class="flex flex-col items-center text-center flex-none w-full md:w-24 relative z-10 group">
           <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
-            <i data-lucide="scan-search" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+            class="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
+            <i data-lucide="scan-search" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">ICP Research & Targeting</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[180px] mx-auto">
+          <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">ICP Research & Targeting</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[140px] mx-auto">
             Accounts, roles, and buying context defined through research
           </p>
         </div>
 
-        <!-- Step 2: Messaging -->
-        <div class="flex flex-col items-center text-center flex-1 relative z-10 w-full group">
+        <!-- Connector 1 -->
+        <div
+          class="hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-purple-300 dark:border-purple-800/60">
           <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
-            <i data-lucide="message-square-text" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+            class="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-purple-500 shadow-sm shadow-purple-500/50">
           </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Messaging & Positioning</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[180px] mx-auto">
+          <div class="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-sm shadow-cyan-500/50">
+          </div>
+        </div>
+
+        <!-- Step 2: Messaging -->
+        <div class="flex flex-col items-center text-center flex-none w-full md:w-24 relative z-10 group">
+          <div
+            class="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
+            <i data-lucide="message-square-text" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+          </div>
+          <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Messaging & Positioning</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[140px] mx-auto">
             Messaging aligned to your offer, market, and buyer intent
           </p>
         </div>
 
-        <!-- Step 3: Outreach -->
-        <div class="flex flex-col items-center text-center flex-1 relative z-10 w-full group">
-          <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center shadow-lg shadow-teal-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
-            <i data-lucide="send" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+        <!-- Connector 2 -->
+        <div
+          class="hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-cyan-300 dark:border-cyan-800/60">
+          <div class="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-sm shadow-cyan-500/50">
           </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">LinkedIn & Email Outreach</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[180px] mx-auto">
+          <div class="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-teal-500 shadow-sm shadow-teal-500/50">
+          </div>
+        </div>
+
+        <!-- Step 3: Outreach -->
+        <div class="flex flex-col items-center text-center flex-none w-full md:w-24 relative z-10 group">
+          <div
+            class="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center shadow-lg shadow-teal-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
+            <i data-lucide="send" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+          </div>
+          <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">LinkedIn & Email Outreach</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[140px] mx-auto">
             Daily outbound executed with discipline across channels
           </p>
         </div>
 
-        <!-- Step 4: Qualification -->
-        <div class="flex flex-col items-center text-center flex-1 relative z-10 w-full group">
-          <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shadow-lg shadow-orange-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
-            <i data-lucide="message-circle" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+        <!-- Connector 3 -->
+        <div
+          class="hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-teal-300 dark:border-teal-800/60">
+          <div class="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-teal-500 shadow-sm shadow-teal-500/50">
           </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Conversations & Qualification</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[180px] mx-auto">
+          <div
+            class="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-orange-500 shadow-sm shadow-orange-500/50">
+          </div>
+        </div>
+
+        <!-- Step 4: Qualification -->
+        <div class="flex flex-col items-center text-center flex-none w-full md:w-24 relative z-10 group">
+          <div
+            class="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shadow-lg shadow-orange-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
+            <i data-lucide="message-circle" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+          </div>
+          <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Conversations & Qualification</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[140px] mx-auto">
             Inbound responses handled, qualified, and progressed
           </p>
         </div>
 
-        <!-- Step 5: Pipeline -->
-        <div class="flex flex-col items-center text-center flex-1 relative z-10 w-full group">
+        <!-- Connector 4 -->
+        <div
+          class="hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-orange-300 dark:border-orange-800/60">
           <div
-            class="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center shadow-lg shadow-pink-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
-            <i data-lucide="trending-up" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+            class="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-orange-500 shadow-sm shadow-orange-500/50">
           </div>
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Pipeline</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[180px] mx-auto">
+          <div class="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-pink-500 shadow-sm shadow-pink-500/50">
+          </div>
+        </div>
+
+        <!-- Step 5: Pipeline -->
+        <div class="flex flex-col items-center text-center flex-none w-full md:w-24 relative z-10 group">
+          <div
+            class="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center shadow-lg shadow-pink-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300">
+            <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+          </div>
+          <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Pipeline</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-[140px] mx-auto">
             A steady flow of qualified buyer conversations created
           </p>
         </div>
@@ -254,8 +204,6 @@
   <!-- How We Work -->
   <section class="py-24 bg-brand-bg dark:bg-slate-950" id="work">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm dark:text-blue-400">Partnership
-        Model</span>
       <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-8 dark:text-white">How we work together</h2>
       <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12 dark:text-gray-300">
         "Ascent operates as a long-term outbound partner — not a one-off service. <br> Engagements are structured as
@@ -263,81 +211,66 @@
         retainers, with scope and pricing aligned during a short strategy call based on your ICP, offer, and sales
         motion."
       </p>
-      <a href="#book"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-brand-text text-white rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20">
-        <span>Start the Partnership</span>
-        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </a>
     </div>
   </section>
 
-  <!-- Results/Benefits -->
-  <section class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <div
-        class="bg-brand-text rounded-3xl p-8 md:p-16 relative overflow-hidden text-white dark:bg-slate-800 border dark:border-slate-700">
+
+
+  <!-- What Changes Section -->
+  <section class="py-24 bg-[#e0e8ff] dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">What changes</h2>
+        <p class="text-xl text-blue-600 dark:text-blue-400 font-semibold">The system creates:</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <!-- Item 1 -->
         <div
-          class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
+          <div
+            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+          </div>
+          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">A steady outbound rhythm</span>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">What changes?</h2>
-            <p class="text-gray-300 text-lg mb-8">Move from chaotic, random acts of sales to a predictable revenue
-              engine.</p>
-            <a href="#book"
-              class="inline-block px-6 py-3 bg-white text-brand-text rounded-full font-medium hover:bg-gray-100 transition-colors">
-              Get predictable results
-            </a>
+        <!-- Item 2 -->
+        <div
+          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
+          <div
+            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
           </div>
-
-          <div class="space-y-4">
-            <!-- Benefit Items -->
-            <div
-              class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div class="mt-1 bg-green-500/20 p-1 rounded-full">
-                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Steady outbound rhythm</h4>
-                <p class="text-gray-400 text-sm">Consistent activity, regardless of internal busy-ness.</p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div class="mt-1 bg-green-500/20 p-1 rounded-full">
-                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Cleaner conversations</h4>
-                <p class="text-gray-400 text-sm">Talking to real buyers who actually need your solution.</p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div class="mt-1 bg-green-500/20 p-1 rounded-full">
-                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Predictable pipeline</h4>
-                <p class="text-gray-400 text-sm">Know where your next leads are coming from.</p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div class="mt-1 bg-green-500/20 p-1 rounded-full">
-                <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Control over revenue</h4>
-                <p class="text-gray-400 text-sm">Dial up or down based on capacity.</p>
-              </div>
-            </div>
-          </div>
+          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Cleaner conversations with the right
+            buyers</span>
         </div>
+
+        <!-- Item 3 -->
+        <div
+          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
+          <div
+            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+          </div>
+          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Less guesswork around pipeline</span>
+        </div>
+
+        <!-- Item 4 -->
+        <div
+          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
+          <div
+            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+          </div>
+          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">More control over growth</span>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
+          Outbound stops feeling random and starts feeling reliable.
+        </p>
       </div>
     </div>
   </section>
