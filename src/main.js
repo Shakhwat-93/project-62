@@ -7,7 +7,24 @@ import Lenis from '@studio-freight/lenis'
 gsap.registerPlugin(ScrollTrigger)
 
 // Initialize Icons
-createIcons({ icons })
+// Initialize Icons
+const initIcons = () => {
+  try {
+    createIcons({ icons })
+    console.log('Icons initialized successfully')
+  } catch (error) {
+    console.error('Failed to initialize icons:', error)
+  }
+}
+
+// Expose for manual re-init if needed
+window.initIcons = initIcons
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initIcons)
+} else {
+  initIcons()
+}
 
 // Initialize Smooth Scroll (Lenis)
 const lenis = new Lenis({
