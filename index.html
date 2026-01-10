@@ -2,23 +2,53 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9RGP78X7G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z9RGP78X7G');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ascent - Outbound Growth Partner</title>
   <meta name="description" content="Ascent operates as a long-term outbound partner for scaling B2B companies." />
+
+
+
+  <script type="module" crossorigin src="./assets/index-UFyzAyIM.js"></script>
+  <link rel="stylesheet" href="./assets/index-UMa9mOqu.css">
+
+  <!-- Agency Layer Dependencies -->
+  <link rel="stylesheet" href="./agency/styles.css">
+
+  <!-- Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Immediate registration to catch bundled code usage
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+  </script>
+  <script src="./agency/main.js" defer></script>
 </head>
 
 <body class="bg-brand-bg dark:bg-slate-950 text-brand-text antialiased transition-colors duration-300 min-h-screen">
 
   <!-- Floating Hero Container -->
-  <div id="hero-container"
-    class="relative mx-4 mt-4 md:mx-6 md:mt-6 rounded-[2.5rem] overflow-hidden min-h-[90vh] backdrop-blur-3xl dark"
-    style="background: linear-gradient(to bottom, #8ac4eb 0%, rgba(59,130,246,0) 250px), linear-gradient(to right, #e0f2fe 0%, #8ac4eb 50%, #e0f2fe 100%) no-repeat; background-size: cover;">
+  <div id="hero-static" class="relative w-full overflow-hidden min-h-[90vh] backdrop-blur-3xl dark">
     <!-- Navbar -->
-    <nav class="absolute top-0 w-full z-50 transition-all duration-300 border-b border-transparent" id="navbar">
+    <nav class="absolute top-0 w-full z-50 transition-all duration-300 p-6" id="navbar">
       <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <a href="#" class="transition-opacity duration-300 hover:opacity-80" id="nav-logo">
-          <img src="assets/2.png" alt="Ascent  Logo" class="h-28 text-[#001F3D] w-auto object-contain">
+          <img src="./assets/logo-main.png" alt="Ascent  Logo"
+            class="h-20 md:h-28 w-auto object-contain logo-white-filter">
         </a>
         <div class="flex items-center gap-6">
 
@@ -33,14 +63,15 @@
       <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
         <div class="max-w-5xl mx-auto mb-16">
           <h1
-            class="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight animate-fade-in-up delay-100 text-white drop-shadow-md">
-            Outbound growth partner <br class="hidden md:block" /> for scaling <span class="text-[#001F3D]">B2B
-              companies</span>
+            class="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight animate-fade-in-up delay-100 text-white drop-shadow-sm">
+            Outbound Growth Partner <br class="hidden md:block" /> for Scaling B2B Companies
           </h1>
 
-          <p class="text-xl text-gray-100 mb-10 max-w-4xl mx-auto animate-fade-in-up delay-200 font-light">
-            We own outbound strategy and execution end to end, from ICP definition and messaging through LinkedIn
-            and cold email outreach, turning pipeline from experimental into consistent. <br> <br> <span
+          <p
+            class="text-xl text-white mb-10 max-w-4xl mx-auto animate-fade-in-up delay-200 font-normal leading-relaxed">
+            We own outbound strategy and execution end to end, from ICP <br class="hidden md:block">
+            definition and messaging through LinkedIn and cold email <br class="hidden md:block">
+            outreach, turning pipeline from experimental into consistent. <br> <br> <span
               class="font-bold text-white">No
               internal noise. No
               scattered execution. Just a system built to run.</span>
@@ -71,12 +102,16 @@
 
         <!-- Right: Text -->
         <div class="space-y-8 mt-4 md:mt-0">
-          <p class="text-xl text-gray-400 dark:text-gray-300 leading-relaxed">
-            We handle ICP definition, targeting, and prospect logic, develop messaging aligned to your offer, and
-            execute outreach across LinkedIn and cold email. We manage replies, follow-ups, and qualification, and
-            continuously optimise based on real responses.
+          <p class="text-xl text-gray-300 dark:text-gray-300 leading-relaxed">
+            We handle ICP definition, targeting, and <br class="hidden md:block">
+            prospect logic, develop messaging aligned to <br class="hidden md:block">
+            your offer, and execute outreach across <br class="hidden md:block">
+            LinkedIn and cold email. We manage replies, <br class="hidden md:block">
+            follow-ups, and qualification, and <br class="hidden md:block">
+            continuously optimise based on real <br class="hidden md:block">
+            responses.
           </p>
-          <p class="text-lg text-gray-900 dark:text-white leading-relaxed">
+          <p class="text-lg text-gray-900 dark:text-white leading-relaxed" style="white-space: nowrap;">
             You focus on closing. We handle everything before that.
           </p>
         </div>
@@ -229,58 +264,52 @@
 
 
   <!-- What Changes Section -->
-  <section class="py-20 md:py-28 mx-4 md:mx-8 rounded-xl bg-[#edfafa] dark:bg-slate-900">
-    <div class="max-w-4xl mx-auto px-6">
+  <!-- What Changes Section -->
+  <section class="py-20 md:py-28 mx-4 md:mx-8 rounded-3xl relative overflow-hidden bg-slate-100">
+
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">What changes</h2>
-        <p class="text-xl text-gray-600 dark:text-blue-400 font-semibold">The outcome:</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What changes</h2>
+        <p class="text-xl text-gray-600 font-semibold">The outcome:</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6 mb-12">
         <!-- Item 1 -->
-        <div
-          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
-          <div
-            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="arrow-right" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+        <div class="premium-card premium-card-light group cursor-default">
+          <div class="icon-box">
+            <i data-lucide="arrow-right" class="w-5 h-5 text-slate-700"></i>
           </div>
-          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">A steady outbound rhythm</span>
+          <span class="text-xl font-medium transition-colors">A steady outbound rhythm</span>
         </div>
 
         <!-- Item 2 -->
-        <div
-          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
-          <div
-            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="arrow-right" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+        <div class="premium-card premium-card-light group cursor-default">
+          <div class="icon-box">
+            <i data-lucide="arrow-right" class="w-5 h-5 text-slate-700"></i>
           </div>
-          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Cleaner conversations with the right
-            buyers</span>
+          <span class="text-xl font-medium transition-colors">Cleaner conversations with the right buyers</span>
         </div>
 
         <!-- Item 3 -->
-        <div
-          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
-          <div
-            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="arrow-right" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+        <div class="premium-card premium-card-light group cursor-default">
+          <div class="icon-box">
+            <i data-lucide="arrow-right" class="w-5 h-5 text-slate-700"></i>
           </div>
-          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Less guesswork around pipeline</span>
+          <span class="text-xl font-medium transition-colors">Less guesswork around pipeline</span>
         </div>
 
         <!-- Item 4 -->
-        <div
-          class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-blue-50 dark:border-slate-700 flex items-center gap-4 transition-transform hover:-translate-y-1">
-          <div
-            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="arrow-right" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+        <div class="premium-card premium-card-light group cursor-default">
+          <div class="icon-box">
+            <i data-lucide="arrow-right" class="w-5 h-5 text-slate-700"></i>
           </div>
-          <span class="text-lg font-medium text-gray-800 dark:text-gray-200">More control over growth</span>
+          <span class="text-xl font-medium transition-colors">More control over growth</span>
         </div>
       </div>
 
       <div class="text-center">
-        <p class="text-2xl py-6 md:text-3xl text-gray-600 dark:text-white leading-tight">
+        <p class="text-2xl py-6 md:text-3xl text-gray-600 dark:text-white leading-tight" style="white-space: nowrap;">
           Outbound stops feeling random and starts feeling reliable.
         </p>
       </div>
@@ -296,7 +325,7 @@
       </p>
       <div class="flex flex-col items-center gap-6">
         <a href="https://cal.com/jamilahmed/30min"
-          class="px-10 py-5 bg-brand-text text-white rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-xl shadow-blue-500/20 w-full sm:w-auto">
+          class="px-10 py-5 bg-deep-navy text-white rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-xl shadow-blue-500/20 w-full sm:w-auto">
           Book a Strategy Call
         </a>
       </div>
@@ -304,23 +333,21 @@
   </section>
 
   <!-- Footer -->
-  <footer class="mx-8 mb-8 rounded-3xl py-6 md:py-12 overflow-hidden"
-    style="background: linear-gradient(to bottom, #8ac4eb 0%, rgba(59,130,246,0) 250px), linear-gradient(to right, #e0f2fe 0%, #e0f2fe 50%, #e0f2fe 100%) no-repeat; background-size: cover;">
+  <footer class="mx-8 mb-8 rounded-3xl py-6 md:py-12 overflow-hidden footer-hero-match relative">
     <div
       class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-end justify-between gap-3 md:gap-6">
       <div class="flex flex-col items-center md:items-start gap-1 md:gap-2">
-        <img src="assets/2.png" alt="" class="h-20 md:h-28 w-auto object-contain brightness-0 text-[#001F3D]">
-        <p class="text-xs md:text-sm font-medium text-[#001F3D] text-center md:text-left">Outbound growth partner for
+        <img src="./assets/logo-main.png" alt="" class="h-20 md:h-28 w-auto object-contain brightness-0 invert">
+        <p class="text-xs md:text-sm font-medium text-center md:text-left">Outbound growth partner for
           scaling B2B
           companies</p>
       </div>
-      <div class="text-[#001F3D] font-medium text-xs md:text-sm">
+      <div class="font-medium text-xs md:text-sm">
         © 2026 Ascent. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
