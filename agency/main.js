@@ -87,5 +87,37 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Lucide library not found');
     }
 
+    // --- Form Submission Logic ---
+    const contactForm = document.querySelector('.clean-form');
+    const successModal = document.getElementById('success-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('close-modal');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+
+    if (contactForm && successModal) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop actual submission
+            console.log('Form submitted');
+
+            // Show Modal
+            successModal.classList.add('modal-visible');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+
+            // Reset form
+            contactForm.reset();
+        });
+
+        const hideModal = () => {
+            console.log('Closing modal');
+            successModal.classList.remove('modal-visible');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        };
+
+        closeModalBtn.addEventListener('click', hideModal);
+        modalBackdrop.addEventListener('click', hideModal);
+    }
+
     setTimeout(initAnimations, 100); // Small delay to ensure layout is ready
 });
