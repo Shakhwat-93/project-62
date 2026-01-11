@@ -1,25 +1,37 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export const Button = ({ className, variant = 'primary', href, children, ...props }) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 cursor-pointer";
+export const Button = ({
+    children,
+    variant = 'primary',
+    className,
+    href,
+    type = 'button',
+    ...props
+}) => {
+    const baseStyles = "inline-flex items-center justify-center rounded-xl font-bold transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
 
     const variants = {
-        primary: "bg-brand-orange text-white hover:bg-brand-orange/90",
-        white: "bg-white text-brand-navy hover:bg-gray-100",
-        glass: "bg-white/10 backdrop-blur-md text-white border border-white/10 hover:bg-white/20",
-        form: "w-full bg-brand-orange text-white hover:bg-brand-orange/90 py-3 rounded-lg"
+        primary: "bg-brand-navy text-white hover:scale-105 shadow-xl shadow-blue-500/20",
+        white: "bg-white text-brand-navy hover:scale-105 shadow-xl",
+        glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-brand-navy",
+        form: "w-full py-5 bg-gradient-to-r from-brand-navy to-slate-900 text-white shadow-lg hover:-translate-y-1 group"
     };
 
-    const Component = href ? 'a' : 'button';
+    const combinedClasses = twMerge(baseStyles, variants[variant], className);
+
+    if (href) {
+        return (
+            <a href={href} className={combinedClasses} {...props}>
+                {children}
+            </a>
+        );
+    }
 
     return (
-        <Component
-            href={href}
-            className={cn(baseStyles, variants[variant], className)}
-            {...props}
-        >
+        <button type={type} className={combinedClasses} {...props}>
             {children}
-        </Component>
+        </button>
     );
 };

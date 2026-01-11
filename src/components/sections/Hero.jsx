@@ -4,9 +4,9 @@ import { Button } from '../ui/Button';
 
 export const Hero = () => {
     return (
-        <div id="hero-static" className="relative w-full overflow-hidden min-h-[90vh] bg-brand-navy flex items-center justify-center">
+        <div id="hero-static" className="relative w-full overflow-hidden min-h-[90vh] bg-[#18194a] flex items-center justify-center">
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-navy/10 pointer-events-none z-10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-[#18194a]/50 pointer-events-none z-10" />
 
             <section className="relative pt-32 pb-24 md:pt-52 md:pb-40 w-full z-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
