@@ -17,6 +17,7 @@ export default {
                     navy: '#18194a',
                     blue: '#3B82F6',
                     lightBlue: '#60A5FA',
+                    orange: '#F97316',
                 }
             },
             backgroundImage: {
