@@ -28,7 +28,7 @@ export const ContactPage = () => {
                 </div>
             </nav>
 
-            <main className="flex-grow flex items-center justify-center relative px-6 py-20 min-h-screen">
+            <main className="flex-grow flex items-center justify-center relative px-6 py-12 md:py-20 min-h-screen">
                 <div className="max-w-4xl w-full mx-auto grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
 
                     {/* Left: Contact Info */}
