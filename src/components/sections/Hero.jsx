@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Button } from '../ui/Button';
 import gsap from 'gsap';
-import { useGSAP } from '../../hooks/useGSAP';
+import { useGSAP } from '@gsap/react';
 
 export const Hero = () => {
     const container = useRef();

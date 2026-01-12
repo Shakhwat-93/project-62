@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
-import { useGSAP } from '../../hooks/useGSAP';
+import { useGSAP } from '@gsap/react';
 
 export const CommercialStructure = () => {
     const container = useRef();

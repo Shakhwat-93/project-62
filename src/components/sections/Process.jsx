@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { ScanSearch, MessageSquareText, Send, MessageCircle, TrendingUp } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '../../hooks/useGSAP';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
