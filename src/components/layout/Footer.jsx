@@ -9,7 +9,7 @@ export const Footer = () => {
                         <img
                             src="/assets/logo-main.png"
                             alt="Ascent"
-                            className="h-16 md:h-20 w-auto object-contain brightness-0 invert -ml-2"
+                            className="h-32 md:h-48 w-auto object-contain brightness-0 invert -ml-2 -mt-10 md:-mt-16"
                         />
                         <p className="text-[10px] md:text-xs font-medium text-center md:text-left text-white/60 max-w-xs">
                             Outbound growth partner for scaling B2B companies.

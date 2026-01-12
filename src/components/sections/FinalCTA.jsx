@@ -4,8 +4,8 @@ import { Button } from '../ui/Button';
 export const FinalCTA = () => {
     return (
         <section className="py-24 md:py-48 text-center bg-white" id="book">
-            <div className="max-w-5xl mx-auto px-6">
-                <p className="text-xl md:text-3xl font-medium text-slate-900 mb-10 leading-relaxed">
+            <div className="w-full mx-auto px-6">
+                <p className="text-xl md:text-2xl font-medium text-slate-900 mb-10 leading-relaxed max-w-7xl mx-auto">
                     When outbound underperforms, the cause is rarely channel saturation or messaging fatigue.
                     <br className="block my-6" />
                     It is almost always structural misalignment.
