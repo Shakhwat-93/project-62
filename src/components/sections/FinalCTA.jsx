@@ -8,9 +8,7 @@ export const FinalCTA = () => {
                 <p className="text-xl md:text-2xl font-medium text-slate-900 mb-10 leading-relaxed max-w-7xl mx-auto" style={{ textWrap: 'balance' }}>
                     When outbound underperforms, the cause is rarely channel saturation or messaging fatigue.
                     <br className="block my-6" />
-                    It is almost always structural misalignment.
-                    <br className="block my-6" />
-                    We design for structure first.
+                    It is almost always structural misalignment. We design for structure first.
                 </p>
                 <div className="flex flex-col items-center gap-6">
                     <Button
