@@ -16,19 +16,19 @@ export const ContactPage = () => {
     return (
         <div className="min-h-screen bg-[#11112b] text-white flex flex-col font-sans selection:bg-blue-500/30">
             {/* Navbar Placeholder - Minimal */}
-            <nav className="absolute top-0 w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center">
-                <a href="/" className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+            <nav className="absolute top-0 w-full z-50 px-6 py-4 md:py-2 md:px-12 flex justify-between items-center">
+                <a href="/" className="text-2xl font-bold tracking-tight text-white flex items-center gap-2 -mt-6 md:-mt-10">
                     {/* Assuming SVG or text logo if image not available, but user has image. Using text for now to match style or image if imported. */}
                     {/* Using simple text for clean look on this page or the logo image if global. Let's use text 'Ascent' or logo img if we import it. */}
-                    <img src="/assets/logo-main.png" alt="Ascent" className="h-20 w-auto object-contain brightness-0 invert" />
+                    <img src="/assets/logo-main.png" alt="Ascent" className="h-32 md:h-48 w-auto object-contain brightness-0 invert origin-left" />
                 </a>
-                <div className="hidden md:block">
+                <div className="hidden md:block -mt-6 md:-mt-10">
                     {/* Menu icon placeholder or simple link back */}
                     <a href="/" className="text-white/70 hover:text-white transition-colors">Back to Home</a>
                 </div>
             </nav>
 
-            <main className="flex-grow flex items-center justify-center relative px-6 py-12 md:py-20 min-h-screen">
+            <main className="flex-grow flex items-center justify-center relative px-6 pt-32 pb-12 md:pt-48 md:pb-20 min-h-screen">
                 <div className="max-w-4xl w-full mx-auto grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
 
                     {/* Left: Contact Info */}
@@ -48,17 +48,7 @@ export const ContactPage = () => {
                         </div>
 
                         {/* Social Icons */}
-                        <div className="flex flex-col gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white text-[#11112b] flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all">
-                                <Linkedin size={20} />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white text-[#11112b] flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all">
-                                <Instagram size={20} />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white text-[#11112b] flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                                <Facebook size={20} />
-                            </a>
-                        </div>
+
                     </div>
 
                     {/* Right: Get In Touch Card */}
@@ -90,7 +80,6 @@ export const ContactPage = () => {
                                     <input
                                         type="text"
                                         className="w-full bg-transparent border-b border-white/20 py-2 px-1 text-sm text-white placeholder-white/20 outline-none focus:border-white transition-colors"
-                                        required
                                     />
                                 </div>
                                 <div className="space-y-1">
@@ -98,7 +87,6 @@ export const ContactPage = () => {
                                     <input
                                         type="text"
                                         className="w-full bg-transparent border-b border-white/20 py-2 px-1 text-sm text-white placeholder-white/20 outline-none focus:border-white transition-colors"
-                                        required
                                     />
                                 </div>
                             </div>
@@ -108,7 +96,6 @@ export const ContactPage = () => {
                                 <input
                                     type="text"
                                     className="w-full bg-transparent border-b border-white/20 py-2 px-1 text-sm text-white placeholder-white/20 outline-none focus:border-white transition-colors"
-                                    required
                                 />
                             </div>
 
@@ -118,7 +105,6 @@ export const ContactPage = () => {
                                     rows="3"
                                     placeholder="Briefly describe your current situation or goals..."
                                     className="w-full bg-transparent border-b border-white/20 py-2 px-1 text-sm text-white placeholder-white/20 outline-none focus:border-white transition-colors resize-none"
-                                    required
                                 ></textarea>
                             </div>
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const Results = () => {
     return (
         <section className="py-16 md:py-48 bg-white border-t border-slate-100">
-            <div className="max-w-4xl mx-auto px-4 md:px-6">
+            <div className="max-w-6xl mx-auto px-4 md:px-6">
                 {/* Centered Heading */}
                 <div className="text-center mb-10 md:mb-24 relative">
                     <h2 className="text-2xl md:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight">
@@ -36,7 +36,7 @@ export const Results = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-center p-6 md:p-12 text-black transform md:scale-105 transition-transform duration-500 hover:scale-[1.07]"
                     >
-                        <p className="text-lg md:text-3xl leading-relaxed">
+                        <p className="text-lg md:text-2xl leading-relaxed md:whitespace-nowrap">
                             You remain focused on closing. We take responsibility for everything upstream.
                         </p>
                     </motion.div>

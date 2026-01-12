@@ -95,7 +95,7 @@ export const Process = () => {
                     {/* Connector 3 */}
                     <div className="process-connector hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-teal-300 dark:border-teal-800/60">
                         <div className="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-teal-500 shadow-sm shadow-teal-500/50"></div>
-                        <div className="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-green-500 shadow-sm shadow-green-500/50" style={{ backgroundColor: '#22c55e' }}></div>
+                        <div className="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-green-500 shadow-sm shadow-green-500/50" style={{ backgroundColor: '#958bbbff' }}></div>
                     </div>
 
                     {/* Step 4 */}
@@ -111,7 +111,7 @@ export const Process = () => {
 
                     {/* Connector 4 */}
                     <div className="process-connector hidden md:flex flex-1 items-center justify-center relative h-0.5 mt-8 md:mt-10 border-t-2 border-dotted border-green-300 dark:border-green-800/60" style={{ borderColor: '#86efac' }}>
-                        <div className="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-green-500 shadow-sm shadow-green-500/50" style={{ backgroundColor: '#22c55e' }}></div>
+                        <div className="absolute -left-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-green-500 shadow-sm shadow-green-500/50" style={{ backgroundColor: '#958bbbff' }}></div>
                         <div className="absolute -right-1 top-[-5px] w-2.5 h-2.5 rounded-full bg-pink-500 shadow-sm shadow-pink-500/50"></div>
                     </div>
 

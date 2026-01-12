@@ -15,34 +15,34 @@ export const Outcome = () => {
                 <div className="grid md:grid-cols-2 gap-6 mb-12">
                     {/* Item 1 */}
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-center gap-6 group cursor-default">
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <ArrowRight className="w-5 h-5 text-blue-600" />
+                        <div className="w-12 h-12 rounded-full bg-[#87BAC3] flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-lg font-medium text-[#0F172A]">A steady outbound rhythm</span>
+                        <span className="text-lg font-medium text-[#0F172A]">Outbound operates without consuming internal operational bandwidth.</span>
                     </div>
 
                     {/* Item 2 */}
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-center gap-6 group cursor-default">
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <ArrowRight className="w-5 h-5 text-blue-600" />
+                        <div className="w-12 h-12 rounded-full bg-[#87BAC3] flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-lg font-medium text-[#0F172A]">Cleaner conversations with the right buyers</span>
+                        <span className="text-lg font-medium text-[#0F172A]">Prospect conversations arrive pre-qualified against defined commercial criteria.</span>
                     </div>
 
                     {/* Item 3 */}
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-center gap-6 group cursor-default">
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <ArrowRight className="w-5 h-5 text-blue-600" />
+                        <div className="w-12 h-12 rounded-full bg-[#87BAC3] flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-lg font-medium text-[#0F172A]">Less guesswork around pipeline</span>
+                        <span className="text-lg font-medium text-[#0F172A]">Pipeline becomes infrastructure, predictable, measurable, and controlled.</span>
                     </div>
 
                     {/* Item 4 */}
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex items-center gap-6 group cursor-default">
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <ArrowRight className="w-5 h-5 text-blue-600" />
+                        <div className="w-12 h-12 rounded-full bg-[#87BAC3] flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-lg font-medium text-[#0F172A]">More control over growth</span>
+                        <span className="text-lg font-medium text-[#0F172A]">Growth shifts from reactive execution to intentional management.</span>
                     </div>
                 </div>
 
@@ -52,9 +52,9 @@ export const Outcome = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-2xl py-6 md:text-3xl text-[#334155] leading-tight font-medium px-4"
+                        className="text-xl py-6 md:text-2xl text-[#334155] leading-tight font-medium px-4 whitespace-nowrap"
                     >
-                        Outbound stops feeling random and starts feeling reliable.
+                        Outbound stops feeling inconsistent and begins operating as a system.
                     </motion.p>
                 </div>
             </div>
