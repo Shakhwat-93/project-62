@@ -13,9 +13,6 @@ export const Navbar = () => {
                     />
                 </a>
                 <div className="hidden md:flex items-center gap-6 mt-3 md:mt-4">
-                    <Button variant="glass" href="#book" className="px-6 py-2.5 font-medium rounded-full">
-                        Contact Us
-                    </Button>
                 </div>
             </div>
         </nav>

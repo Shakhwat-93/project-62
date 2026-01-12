@@ -1,16 +1,12 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
-import { Navbar } from './components/layout/Navbar';
-import { Hero } from './components/sections/Hero';
-import { Results } from './components/sections/Results';
-import { Process } from './components/sections/Process';
-import { CommercialStructure } from './components/sections/CommercialStructure';
-import { Outcome } from './components/sections/Outcome';
-import { Contact } from './components/sections/Contact';
-import { FinalCTA } from './components/sections/FinalCTA';
-import { Footer } from './components/layout/Footer';
+import { Home } from './pages/Home';
+import { ContactPage } from './pages/ContactPage';
 
 function App() {
+    const location = useLocation();
+
     useEffect(() => {
         const lenis = new Lenis({
             duration: 1.2,
@@ -35,18 +31,16 @@ function App() {
         };
     }, []);
 
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return (
-        <div className="bg-white min-h-screen text-slate-900 selection:bg-brand-blue/30 selection:text-white overflow-x-hidden">
-            <Navbar />
-            <Hero />
-            <Results />
-            <Process />
-            <CommercialStructure />
-            <Outcome />
-            <Contact />
-            <FinalCTA />
-            <Footer />
-        </div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<ContactPage />} />
+        </Routes>
     );
 }
 

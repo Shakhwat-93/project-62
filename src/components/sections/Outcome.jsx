@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const Outcome = () => {
     return (
-        <section className="py-20 md:py-28 relative overflow-hidden bg-[#F0F9FF]">
+        <section className="py-20 md:py-28 relative overflow-hidden bg-[#f7f4eb]">
             <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4">What changes</h2>

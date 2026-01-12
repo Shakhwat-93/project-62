@@ -10,11 +10,11 @@ export const FinalCTA = () => {
                 </p>
                 <div className="flex flex-col items-center gap-6">
                     <Button
-                        href="https://cal.com/jamilahmed/30min"
+                        href="/contact"
                         variant="primary"
-                        className="px-10 py-5 bg-[#18194a] text-white rounded-xl font-bold text-xl hover:scale-105 transition-transform shadow-xl shadow-blue-500/20 w-full sm:w-auto hover:bg-slate-800"
+                        className="px-10 py-5 bg-slate-900 text-white rounded-xl font-bold text-xl hover:scale-105 transition-transform shadow-xl shadow-blue-500/20 w-full sm:w-auto hover:bg-slate-800"
                     >
-                        Book a Strategy Call
+                        Contact Us
                     </Button>
                 </div>
             </div>

@@ -63,7 +63,7 @@ export const Process = () => {
 
                     {/* Step 4 */}
                     <div className="flex flex-col items-center text-center flex-none w-full md:w-32 relative z-10 group">
-                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-green-500 flex items-center justify-center shadow-lg shadow-green-200 dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300" style={{ backgroundColor: '#22c55e' }}>
+                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-black flex items-center justify-center shadow-lg shadow-[#7490a6] dark:shadow-none mb-6 transition-transform group-hover:scale-110 duration-300" style={{ backgroundColor: '#958bbbff' }}>
                             <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
                         </div>
                         <h3 className="text-base font-bold text-slate-900 mb-2">Conversations & Qualification</h3>

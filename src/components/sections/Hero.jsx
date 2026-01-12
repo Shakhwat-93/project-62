@@ -10,12 +10,12 @@ export const Hero = () => {
 
             <section className="relative pt-32 pb-24 md:pt-52 md:pb-40 w-full z-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="max-w-5xl mx-auto mb-16">
+                    <div className="max-w-7xl mx-auto mb-16">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight text-white drop-shadow-sm font-display mx-auto max-w-4xl"
+                            className="text-6xl md:text-7xl font-bold tracking-tight mb-8 leading-tight text-white drop-shadow-sm font-display mx-auto max-w-7xl"
                             style={{ textWrap: 'balance' }}
                         >
                             Outbound Growth Partner for B2B Companies
@@ -37,7 +37,7 @@ export const Hero = () => {
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="flex items-center justify-center"
                         >
-                            <Button variant="white" href="#contact" className="px-8 py-4 text-lg">
+                            <Button variant="white" href="/contact" className="px-8 py-4 text-lg">
                                 Request a Conversation
                             </Button>
                         </motion.div>
