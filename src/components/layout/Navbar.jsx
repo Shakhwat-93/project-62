@@ -10,6 +10,7 @@ export const Navbar = () => {
                         src="/assets/logo-main.png"
                         alt="Ascent Logo"
                         className="h-28 md:h-40 w-auto object-contain brightness-0 invert origin-left"
+                        fetchPriority="high"
                     />
                 </a>
                 <div className="hidden md:flex items-center gap-6 mt-3 md:mt-4">

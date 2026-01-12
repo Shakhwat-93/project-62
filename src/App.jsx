@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
-import { Home } from './pages/Home';
-import { ContactPage } from './pages/ContactPage';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
 
 function App() {
     const location = useLocation();
@@ -37,10 +39,12 @@ function App() {
     }, [location]);
 
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-screen bg-[#11112b]" />}>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+        </Suspense>
     );
 }
 
