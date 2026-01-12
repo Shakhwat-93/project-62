@@ -43,7 +43,7 @@ export const ContactPage = () => {
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h3 className="text-lg font-bold text-white">Email</h3>
-                                <p className="text-white/60">info@nomadzdigital.com</p>
+                                <p className="text-white/60">jamil@getascent.co</p>
                             </div>
                         </div>
 
