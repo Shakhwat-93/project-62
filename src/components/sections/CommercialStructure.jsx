@@ -43,7 +43,7 @@ export const CommercialStructure = () => {
                     Engagements are structured as a monthly retainer.
                 </p>
 
-                <p ref={text2Ref} className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                <p ref={text2Ref} className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto" style={{ textWrap: 'balance' }}>
                     Scope is defined during an initial strategy session and aligned to your ICP, offer, and sales motion. There are no pre-packaged services or fixed tiers.
                 </p>
             </div>

@@ -52,7 +52,7 @@ export const Outcome = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-xl py-6 md:text-2xl text-[#334155] leading-tight font-medium px-4 whitespace-nowrap"
+                        className="text-xl py-6 md:text-2xl text-[#334155] leading-tight font-medium px-4 md:whitespace-nowrap"
                     >
                         Outbound stops feeling inconsistent and begins operating as a system.
                     </motion.p>
