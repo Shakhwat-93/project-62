@@ -35,7 +35,7 @@ export const Hero = () => {
     return (
         <div id="hero-static" className="relative w-full overflow-hidden min-h-[90vh] bg-[#11112b] flex items-center justify-center" ref={container}>
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-[#18194a]/50 pointer-events-none z-10" />
+
 
             <section className="relative pt-24 pb-16 md:pt-52 md:pb-40 w-full z-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
