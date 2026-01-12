@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const Results = () => {
     return (
@@ -15,18 +16,30 @@ export const Results = () => {
                 {/* Content - Vertical Flow */}
                 <div className="space-y-8 md:space-y-12">
                     {/* Block 1: The Problem */}
-                    <div className="bg-slate-50 p-6 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100/80">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="bg-slate-50 p-6 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100/80"
+                    >
                         <p className="text-lg md:text-2xl text-slate-600 leading-relaxed font-light">
                             Outbound fails when ownership is diluted. Strategy, execution, and response handling are treated as separate tasks, distributed across people and tools, with no single party accountable for pipeline performance. <br /> <br />
                             We assume full ownership of the outbound function. We define the ICP, prioritise target accounts, establish prospect logic, develop positioning and messaging aligned to your offer and buying context, and execute outreach across LinkedIn and email. We manage responses, follow-ups, and qualification, and adjust execution based on direct prospect engagement.
                         </p>
-                    </div>
+                    </motion.div>
                     {/* Block 3: The Result (Highlights) */}
-                    <div className="text-center p-6 md:p-12 text-black transform md:scale-105 transition-transform duration-500 hover:scale-[1.07]">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-center p-6 md:p-12 text-black transform md:scale-105 transition-transform duration-500 hover:scale-[1.07]"
+                    >
                         <p className="text-lg md:text-3xl leading-relaxed">
                             You remain focused on closing. We take responsibility for everything upstream.
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

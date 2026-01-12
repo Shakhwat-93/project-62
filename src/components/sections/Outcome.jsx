@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const Outcome = () => {
     return (
@@ -46,9 +47,15 @@ export const Outcome = () => {
                 </div>
 
                 <div className="text-center">
-                    <p className="text-2xl py-6 md:text-3xl text-[#334155] leading-tight font-medium" style={{ whiteSpace: 'nowrap' }}>
+                    <motion.p
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="text-2xl py-6 md:text-3xl text-[#334155] leading-tight font-medium px-4"
+                    >
                         Outbound stops feeling random and starts feeling reliable.
-                    </p>
+                    </motion.p>
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ export const Button = ({
     type = 'button',
     ...props
 }) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-xl font-bold transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
+    const baseStyles = "inline-flex items-center justify-center rounded-xl font-bold transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none px-6 py-3 text-base md:px-8 md:py-4 md:text-lg";
 
     const variants = {
         primary: "bg-brand-navy text-white hover:scale-105 shadow-xl shadow-blue-500/20",
